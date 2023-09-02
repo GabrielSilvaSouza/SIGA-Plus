@@ -1,68 +1,102 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>EEL873 - Engenharia de Software (ECI/EEL)</title>
-  <link rel="stylesheet" href="style/style.css" type="text/css" media="screen" />
-  <script type="text/javascript" src="style/accordian.pack.js"></script>
+  <title>SIGA +</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="default.css" media="screen" />
+  <link rel="icon" href="img/logo.png" type="image/x-icon" />
 </head>
 
-<body onload="new Accordian('basic-accordian',5,'header_highlight');">
-  <div id="logo">
-    <h1>Siga +</h1>
-  </div>
-  <div id="basic-accordian">
-    <div id="test-header" class="accordion_headings header_highlight">Home</div>
-    <div id="test-content">
-      <div class="accordion_child">
-        <h2>Membros do Grupo C:</h2>
-        <ul>
-          <li>Gabriel da Silva Souza</li>
-          <li>Bárbara Cerqueira</li>
-          <li>Alanna Simões</li>
-          <li>Barbara Varela</li>
-          <br>
-        <h1>Proposta Informal do Siga Plus</h1>
-        <p>O projeto deve consistir de alocar salas para os professores de um curso de graduação em função da
-          disponibilidade de horário e dias disponíveis dos professores, da capacidade máxima de alunos na sala, do
-          número de alunos inscritos na matéria, dos recursos disponíveis em sala (quadro branco, projetor, ar
-          condicionado, se tem computadores ou não, caixa de som etc), evitando conflitos de horário com outras
-          disciplinas. Além disso, o sistema deve ser projetado de forma a priorizar salas que já pertencem àquele
-          curso.</p>
-        <h2>Valor Operacional – B2B</h2>
-        <p>O Siga + possui os seguintes valores operacionais:</p>
-        <ul>
-          <li>Simplificar</li>
-          <li>Organizar</li>
-          <li>Integrar</li>
-        </ul>
+<body>
+  <div class="outer-container">
+    <div class="inner-container">
+      <div class="header">
+        <div class="title"> <span class="sitename"> <a href="#">SIGA +</a></span>
+          <div class="slogan">EEL873 - Engenharia de Software</div>
+        </div>
+      </div>
+      <div class="path"> <a href="#">Home</a> </div>
+      <div class="main">
+        <div class="content">
+          <h1>Membros da Equipe</h1>
+          <div class="descr"></div>
+          <ul>
+            <li>Gabriel da Silva Souza</li>
+            <li>Bárbara Cerqueira</li>
+            <li>Alanna Simões</li>
+            <li>Barbara Varela</li>
+
+          </ul>
+
+          <h1>Descrição Informal</h1>
+          <p>O projeto deve consistir de alocar salas para os professores de um curso de graduação em função da
+            disponibilidade de horário e dias disponíveis dos professores, da capacidade máxima de alunos na sala, do
+            número de alunos inscritos na matéria, dos recursos disponíveis em sala (quadro branco, projetor, ar
+            condicionado, se tem computadores ou não, caixa de som etc), evitando conflitos de horário com outras
+            disciplinas. Além disso, o sistema deve ser projetado de forma a priorizar salas que já pertencem àquele
+            curso.</p>
+
+          <h1>Valor Operacional - B2B</h1>
+          <ul>
+            <li>Simplificar - O SIGA+ ajuda na hora de simplificar a alocação de salas.</li>
+            <li>Organizar - Ajuda a organizar a distribuição de salas, matérias, professores e alunos.</li>
+            <li>Integrar - A integração do SIGA+ está ligada a habilidade de relacionar multiplas salas/recursos com
+              multiplos professores, escolhendo o melhor horário em função da demanda.</li>
+          </ul>
+
+          <h1>Software Project Canvas</h1>
+          <div class="thumbnail-container">
+            <img src="img/canva.png" class="thumbnail" alt="Thumbnail 1">
+            
+            <!-- Add more thumbnails here -->
+          </div>
+          <div class="descr">Clique na Imagem</div>
+          <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modal-img">
+          </div>
+
+          <script>
+    
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("modal-img");
+            var closeBtn = document.getElementsByClassName("close")[0];
+
+         
+            var thumbnails = document.getElementsByClassName("thumbnail");
+
+          
+            for (var i = 0; i < thumbnails.length; i++) {
+              thumbnails[i].addEventListener("click", function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+              });
+            }
+
+       
+            closeBtn.addEventListener("click", function () {
+              modal.style.display = "none";
+            });
+
+        
+            window.addEventListener("click", function (event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            });
+
+          </script>
+
+        </div>
+
+        <div class="clearer"></div>
+      </div>
+      <div class="footer"> <span class="left"> &copy; 2023 <a href="#">UFRJ</a></span> <span class="right"><a
+            href="http://arcsin.se"></a> </span>
+        <div class="clearer"></div>
       </div>
     </div>
-    <div id="test1-header" class="accordion_headings">Simplificar</div>
-    <div id="test1-content">
-      <div class="accordion_child">
-        <p>O siga ajuda na hora de simplificar a alocação de salas.</p>
-      </div>
-    </div>
-    <div id="test2-header" class="accordion_headings">Integrar</div>
-    <div id="test2-content">
-      <div class="accordion_child">
-        <p>
-          A integração está ligada a habilidade de relacionar multiplas salas/recursos
-          com multiplos professores, escolhendo o melhor horário em função da demanda.
-        </p>
-      </div>
-    </div>
-    <div id="test3-header" class="accordion_headings">Organizar</div>
-    <div id="test3-content">
-      <div class="accordion_child">
-        <p>Ajuda a organizar a distribuição de salas, matérias, professores e alunos.</p>
-      </div>
-    </div>
-  </div>
-  <div id="footer">
-    <p>Copyright UFRJ - PESC</p>
   </div>
 </body>
 

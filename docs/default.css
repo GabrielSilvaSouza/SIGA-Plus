@@ -180,16 +180,32 @@ h1,h2,h3 {padding-top: 6px; color: #553; margin-bottom: 4px;}
 .footer a:hover {color: #FFC;}
 
 /* Styles for Thumbnails */
-.thumbnail-container {
+.img-container {
     display: flex;
     justify-content: center; /* Center-align the thumbnails horizontally */
     align-items: center; /* Center-align the thumbnails vertically */
     flex-wrap: wrap;
 }
 
-.thumbnail {
+.img1 {
 
-    width: 500px;
+    width: 600px;
+    height: auto;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.img2 {
+
+    width: 600px;
+    height: auto;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.img3 {
+
+    width: 600px;
     height: auto;
     margin: 10px;
     cursor: pointer;
@@ -199,6 +215,7 @@ h1,h2,h3 {padding-top: 6px; color: #553; margin-bottom: 4px;}
 .modal {
     display: none;
     position: fixed;
+	align-items: center;
     z-index: 1;
     padding-top: 50px;
     left: 0;

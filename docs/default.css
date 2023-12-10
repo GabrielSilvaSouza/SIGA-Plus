@@ -219,6 +219,14 @@ h1,h2,h3 {padding-top: 6px; color: #553; margin-bottom: 4px;}
     cursor: pointer;
 }
 
+.img5 {
+
+    width: 600px;
+    height: auto;
+    margin: 10px;
+    cursor: pointer;
+}
+
 /* Styles for Modal */
 .modal {
     display: none;
